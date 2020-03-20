@@ -1,0 +1,85 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - salessearchLocation
+  - listBranches
+  - searchBranch
+entities:
+  - branch_location
+  - branch
+  - location
+  - city_id
+  - latitude
+  - location_id
+  - location_type
+  - longitude
+slots:
+  city_id:
+    type: unfeaturized
+  branch:
+    type: unfeaturized
+  latitude:
+    type: unfeaturized
+  location:
+    type: unfeaturized
+  location_id:
+    type: unfeaturized
+  location_type:
+    type: unfeaturized
+  longitude:
+    type: unfeaturized
+  branch_location:
+    type: unfeaturized
+
+
+templates:
+  utter_greet:
+  - text: "Hi How can I  help you?"
+
+  utter_ask_quest:
+  - text: "May i help you?"
+
+  utter_sales_quest:
+  - text: "What is your question about Sales?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+  
+  utter_sales_responses:
+  - text: This month sales for 2.5L
+  - text: This month sales for  10.25L
+  - text: This month sales for  Lay Chips 4.4L
+ 
+  utter_branches:
+  - text: "AllBranches"
+
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_sales_responses
+- utter_ask_quest
+- utter_sales_quest
+- utter_branches 
+- action_search_branch
